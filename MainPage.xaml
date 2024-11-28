@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp2.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="25">
+            <Border
+                x:Name="BorderTop"
+                BackgroundColor="Yellow"
+                HeightRequest="45"
+                Stroke="Red"
+                StrokeShape="RoundRectangle 8"
+                WidthRequest="200">
+                <Entry
+                    x:Name="EntryTop"
+                    HeightRequest="50"
+                    Keyboard="Numeric"
+                    Placeholder="Number Keyboard" />
+                <Border.Triggers>
+                    <Trigger TargetType="Border" Property="Stroke" Value="Green">
+                        <Setter Property="StrokeThickness" Value="2" />
+                    </Trigger>
+                    <Trigger TargetType="Border" Property="Stroke" Value="Red">
+                        <Setter Property="StrokeThickness" Value="1" />
+                    </Trigger>
+                </Border.Triggers>
+            </Border>
+            <Button
+                Clicked="OnButton1Clicked"
+                HorizontalOptions="Fill"
+                Text="Go to Top" />
+            <Button
+                Clicked="OnButton2Clicked"
+                HorizontalOptions="Fill"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Go to Bottom" />
+            <Image
+                Aspect="AspectFit"
+                HeightRequest="185"
+                SemanticProperties.Description="dot net bot in a race car number eight"
+                Source="dotnet_bot.png" />
+
+            <Label
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.HeadingLevel="Level2"
+                Style="{StaticResource SubHeadline}"
+                Text="Welcome to &#10;.NET Multi-platform App UI" />
+
+            <Button
+                Clicked="OnButton1Clicked"
+                HorizontalOptions="Fill"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Go to Top" />
+            <Button
+                Clicked="OnButton2Clicked"
+                HorizontalOptions="Fill"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Text="Go to Bottom" />
+            <Label
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                SemanticProperties.HeadingLevel="Level2"
+                Style="{StaticResource SubHeadline}"
+                Text="Go to Bottom" />
+
+            <Border
+                x:Name="BorderBottom"
+                BackgroundColor="Yellow"
+                HeightRequest="45"
+                StrokeShape="RoundRectangle 8"
+                WidthRequest="200">
+                <Border.Triggers>
+                    <Trigger TargetType="Border" Property="Stroke" Value="Green">
+                        <Setter Property="StrokeThickness" Value="2" />
+                    </Trigger>
+                    <Trigger TargetType="Border" Property="Stroke" Value="Red">
+                        <Setter Property="StrokeThickness" Value="1" />
+                    </Trigger>
+                </Border.Triggers>
+                <Entry
+                    x:Name="EntryBottom"
+                    HeightRequest="50"
+                    Keyboard="Numeric"
+                    Placeholder="Number Keyboard" />
+            </Border>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
